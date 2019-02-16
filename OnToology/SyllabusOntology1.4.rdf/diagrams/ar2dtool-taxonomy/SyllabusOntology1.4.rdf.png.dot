@@ -1,0 +1,26 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "schema:EducationalOrganization" "os:LearningOutcome" "os:Policy" "os:Content" "os:Syllabus" "os:DropOut" "os:LearningObjective" "foaf:Person" "os:Attendance" "aiiso:Department" "os:Topic" "schema:Agent" "os:GoalStatement" "aiiso:School" "schema:Person" "os:Instructor" "foaf:Agent" "aiiso:Faculty" "skos:Concept" "schema:Organization" "frbr:Work" "skos:Collection" "os:Accessibility" "os:Qualification" "os:Reviewer" "os:Competence" "pro:Role" ; /*classes style*/
+	"os:LearningOutcome" -> "os:GoalStatement" [ label = "rdfs:subClassOf" ];
+	"os:Instructor" -> "schema:Person" [ label = "rdfs:subClassOf" ];
+	"os:Content" -> "skos:Collection" [ label = "rdfs:subClassOf" ];
+	"aiiso:Faculty" -> "schema:Organization" [ label = "rdfs:subClassOf" ];
+	"os:Qualification" -> "os:Policy" [ label = "rdfs:subClassOf" ];
+	"schema:Person" -> "schema:Agent" [ label = "rdfs:subClassOf" ];
+	"os:Competence" -> "os:GoalStatement" [ label = "rdfs:subClassOf" ];
+	"os:Topic" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"schema:Organization" -> "foaf:Agent" [ label = "rdfs:subClassOf" ];
+	"schema:Organization" -> "schema:Agent" [ label = "rdfs:subClassOf" ];
+	"foaf:Person" -> "foaf:Agent" [ label = "rdfs:subClassOf" ];
+	"aiiso:Department" -> "schema:Organization" [ label = "rdfs:subClassOf" ];
+	"aiiso:School" -> "schema:Organization" [ label = "rdfs:subClassOf" ];
+	"os:DropOut" -> "os:Policy" [ label = "rdfs:subClassOf" ];
+	"schema:EducationalOrganization" -> "schema:Organization" [ label = "rdfs:subClassOf" ];
+	"os:LearningObjective" -> "os:GoalStatement" [ label = "rdfs:subClassOf" ];
+	"os:Attendance" -> "os:Policy" [ label = "rdfs:subClassOf" ];
+	"os:Accessibility" -> "os:Policy" [ label = "rdfs:subClassOf" ];
+	"os:Reviewer" -> "pro:Role" [ label = "rdfs:subClassOf" ];
+	"os:Syllabus" -> "frbr:Work" [ label = "rdfs:subClassOf" ];
+
+}
