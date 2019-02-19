@@ -1,0 +1,422 @@
+{
+  "@context" : {
+    "durationPerWeek" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#durationPerWeek",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "courseCredits" : {
+      "@id" : "http://vivoweb.org/ontology/core#courseCredits",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "member" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#member",
+      "@type" : "@id"
+    },
+    "score" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#score",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "CourseInstance" : {
+      "@id" : "http://schema.org/CourseInstance"
+    },
+    "taxon" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#taxon",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "durationPerTerm" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#durationPerTerm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "Qualification" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Qualification"
+    },
+    "url" : {
+      "@id" : "http://schema.org/url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "deadline" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#deadline",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "unitPerTerm" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#unitPerTerm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "bibliographicCitation" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#bibliographicCitation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Organization" : {
+      "@id" : "http://schema.org/Organization"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "LearningOutcome" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#LearningOutcome"
+    },
+    "AcademicTerm" : {
+      "@id" : "http://vivoweb.org/ontology/core#AcademicTerm"
+    },
+    "part_of" : {
+      "@id" : "http://purl.org/vocab/aiiso/schema#part_of",
+      "@type" : "@id"
+    },
+    "learningResource" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#learningResource",
+      "@type" : "@id"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/dc/terms/hasVersion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Course" : {
+      "@id" : "http://vivoweb.org/ontology/core#Course"
+    },
+    "Teacher" : {
+      "@id" : "http://linkedscience.org/teach/ns#Teacher"
+    },
+    "Department" : {
+      "@id" : "http://purl.org/vocab/aiiso/schema#Department"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "realization" : {
+      "@id" : "http://purl.org/vocab/frbr/core#realization",
+      "@type" : "@id"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "GoalStatement" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#GoalStatement"
+    },
+    "courseMode" : {
+      "@id" : "http://schema.org/courseMode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "holdsRoleInTime" : {
+      "@id" : "http://purl.org/spar/pro/holdsRoleInTime",
+      "@type" : "@id"
+    },
+    "withRole" : {
+      "@id" : "http://purl.org/spar/pro/withRole",
+      "@type" : "@id"
+    },
+    "Expression" : {
+      "@id" : "http://purl.org/vocab/frbr/core#Expression"
+    },
+    "LinguisticSystem" : {
+      "@id" : "http://purl.org/dc/terms/LinguisticSystem"
+    },
+    "courseCode" : {
+      "@id" : "http://schema.org/courseCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "email" : {
+      "@id" : "http://schema.org/email",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Syllabus" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Syllabus"
+    },
+    "hasIntervalStartDate" : {
+      "@id" : "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "embodiment" : {
+      "@id" : "http://purl.org/vocab/frbr/core#embodiment",
+      "@type" : "@id"
+    },
+    "hasIntervalDate" : {
+      "@id" : "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "RoleInTime" : {
+      "@id" : "http://purl.org/spar/pro/RoleInTime"
+    },
+    "Person" : {
+      "@id" : "http://schema.org/Person"
+    },
+    "assignment" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#assignment",
+      "@type" : "@id"
+    },
+    "Assessment" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Assessment"
+    },
+    "Topic" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Topic"
+    },
+    "DropOut" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#DropOut"
+    },
+    "awardedBy" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#awardedBy",
+      "@type" : "@id"
+    },
+    "Agent" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Agent"
+    },
+    "requirement" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#requirement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "creator" : {
+      "@id" : "http://schema.org/creator",
+      "@type" : "@id"
+    },
+    "Assignment" : {
+      "@id" : "http://linkedscience.org/teach/ns#Assignment"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "office" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#office",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "academicTerm" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#academicTerm",
+      "@type" : "@id"
+    },
+    "Instructor" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Instructor"
+    },
+    "Role" : {
+      "@id" : "http://purl.org/spar/pro/Role"
+    },
+    "EducationalOrganization" : {
+      "@id" : "http://schema.org/EducationalOrganization"
+    },
+    "AcademicDegree" : {
+      "@id" : "http://vivoweb.org/ontology/core#AcademicDegree"
+    },
+    "TimeInterval" : {
+      "@id" : "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"
+    },
+    "KnowledgeGrouping" : {
+      "@id" : "http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"
+    },
+    "LearningObjective" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#LearningObjective"
+    },
+    "instructor" : {
+      "@id" : "http://schema.org/instructor",
+      "@type" : "@id"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "IEEE_RCD_Impl.owlCompetence" : {
+      "@id" : "http://www.teste/ontologies/IEEE_RCD_Impl.owlCompetence"
+    },
+    "Work" : {
+      "@id" : "http://purl.org/vocab/frbr/core#Work"
+    },
+    "coursePrerequisites" : {
+      "@id" : "http://schema.org/coursePrerequisites",
+      "@type" : "@id"
+    },
+    "Audience" : {
+      "@id" : "http://schema.org/Audience"
+    },
+    "hasPrerequisite" : {
+      "@id" : "http://vivoweb.org/ontology/core#hasPrerequisite",
+      "@type" : "@id"
+    },
+    "number" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#number",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCourseInstance" : {
+      "@id" : "http://schema.org/hasCourseInstance",
+      "@type" : "@id"
+    },
+    "Competence" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Competence"
+    },
+    "unitPerWeek" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#unitPerWeek",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "methodology" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#methodology",
+      "@type" : "@id"
+    },
+    "telephone" : {
+      "@id" : "http://schema.org/telephone",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "policy" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#policy",
+      "@type" : "@id"
+    },
+    "studyStrategy" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#studyStrategy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AcademicYear" : {
+      "@id" : "http://vivoweb.org/ontology/core#AcademicYear"
+    },
+    "Content" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Content"
+    },
+    "studyProgram" : {
+      "@id" : "http://linkedscience.org/teach/ns#studyProgram",
+      "@type" : "@id"
+    },
+    "Workload" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Workload"
+    },
+    "Attendance" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Attendance"
+    },
+    "order" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#order",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tableOfContents" : {
+      "@id" : "http://purl.org/dc/terms/tableOfContents",
+      "@type" : "@id"
+    },
+    "academicDegree" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#academicDegree",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "type" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#type",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Accessibility" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Accessibility"
+    },
+    "assessment" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#assessment",
+      "@type" : "@id"
+    },
+    "academicYear" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#academicYear",
+      "@type" : "@id"
+    },
+    "teacher" : {
+      "@id" : "http://linkedscience.org/teach/ns#teacher",
+      "@type" : "@id"
+    },
+    "BibliographicResource" : {
+      "@id" : "dct:BibliographicResource"
+    },
+    "hasIntervalEndDate" : {
+      "@id" : "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Faculty" : {
+      "@id" : "http://purl.org/vocab/aiiso/schema#Faculty"
+    },
+    "help" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#help",
+      "@type" : "@id"
+    },
+    "School" : {
+      "@id" : "http://purl.org/vocab/aiiso/schema#School"
+    },
+    "Classroom" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Classroom"
+    },
+    "Manifestation" : {
+      "@id" : "http://purl.org/vocab/frbr/core#Manifestation"
+    },
+    "Help" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Help"
+    },
+    "Policy" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Policy"
+    },
+    "workload" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#workload",
+      "@type" : "@id"
+    },
+    "classroom" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#classroom",
+      "@type" : "@id"
+    },
+    "hasSchedule" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#hasSchedule",
+      "@type" : "@id"
+    },
+    "audience" : {
+      "@id" : "http://schema.org/audience",
+      "@type" : "@id"
+    },
+    "Schedule" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Schedule"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language",
+      "@type" : "@id"
+    },
+    "Reviewer" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Reviewer"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "hasManifestation" : {
+      "@id" : "http://purl.org/spar/fabio/hasManifestation",
+      "@type" : "@id"
+    },
+    "approve" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#approve",
+      "@type" : "@id"
+    },
+    "SICRA.owlTaxonomiaBloom" : {
+      "@id" : "http://www.fonte-project.net/ontologies/SICRA.owlTaxonomiaBloom"
+    },
+    "code" : {
+      "@id" : "http://purl.org/vocab/aiiso/schema#code",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "weight" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#weight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "description" : {
+      "@id" : "http://schema.org/description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "atTime" : {
+      "@id" : "http://www.essepuntato.it/2012/04/tvc/atTime",
+      "@type" : "@id"
+    },
+    "resume" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#resume",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Collection" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
+    },
+    "Methodology" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#Methodology"
+    },
+    "goal" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#goal",
+      "@type" : "@id"
+    },
+    "educationLevel" : {
+      "@id" : "http://purl.org/he/syllabus/ontology#educationLevel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    }
+  }
+}
